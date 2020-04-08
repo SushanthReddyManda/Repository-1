@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width">
     </head>
     <body>
-      <form method="POST" action="contactform.php">
+      <form  method="" action=""   name="mainform" onsubmit="return validateform();">
 
         <div class ='main'>
 
@@ -14,27 +14,69 @@
 
         <div class="divs">
         <h3>Name</h3>
-        <p><input type="text" id =""  name="name" placeholder="Type Your Name" required>  </p>
+        <p><input type="text" id ="nameid"  name="name" placeholder="Type Your Name" >  </p>
+        <span class="namespan"></span>
+          <div class="namediv">
+            <!-- <span class="TQGan"> -->
+              <svg aria-hidden="true" class="stUf5b" fill="currentColor" focusable="false" width="16px" height="16px" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z">
+                </path>
+              </svg>
+            <!-- </span> -->
+            Enter full name
+          </div>
         </div>
 
         <div class="divs">
         <h3>Email</h3>
-        <p><input type="text" id ="" name="email" placeholder="Type Your Email" required>  </p>
+        <p><input type="text" id ="emailid" name="email" placeholder="Type Your Email" >  </p>
+        <span class="emailspan" ></span>
+          <div class="emaildiv">
+            <svg aria-hidden="true" class="stUf5b" fill="currentColor" focusable="false" width="16px" height="16px" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z">
+              </path>
+            </svg>
+            Enter email
+          </div>
         </div>
 
         <div class="divs">
         <h3>Phone number</h3>
-        <p><input type="text" id =""  name="phonenumber" placeholder="Type Your Phone Number" required>  </p>
+        <p><input type="number" id ="phoneid"  name="phonenumber" placeholder="Type Your Phone Number" >  </p>
+        <span class="phonespan" ></span>
+          <div class="phonediv">
+            <svg aria-hidden="true" class="stUf5b" fill="currentColor" focusable="false" width="16px" height="16px" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z">
+              </path>
+            </svg>
+            Enter Phone number
+          </div>
         </div>
         
         <div class="divs">
         <h3>Address</h3>
-        <p><input type="text" id ="" name="address" placeholder="Type Your Address" required>  </p>
+        <p><input type="text" id ="addressid" name="address" placeholder="Type Your Address" >  </p>
+        <span class="addressspan" ></span>
+          <div class="addressdiv">
+            <svg aria-hidden="true" class="stUf5b" fill="currentColor" focusable="false" width="16px" height="16px" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z">
+              </path>
+            </svg>
+            Enter Address
+          </div>
         </div>
 
         <input type="submit" value='Submit' class ='submit'>
-        </div>
-        </form>
         
+       
+        <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+        </script>
+
+        <script src="contactform.js"></script>
+      </div>
+      </form>
     </body>
     </html>
