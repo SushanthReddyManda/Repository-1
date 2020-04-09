@@ -4,46 +4,56 @@ $(".emaildiv").hide()
 $(".phonediv").hide()
 $(".addressdiv").hide()
 
-function  fori(){
-
-    var j=0;
-
+    function funcname(){
         if($("#nameid").val().length < 2){
-        // $(".namediv").show()
-        // $("#nameid").css({"border-bottom":"2px red solid"});
-        j += 1;
+         $(".namediv").show()
+         $("#nameid").css({"border-bottom":"2px red solid"});
+            return funcemail();
+        }else{
+            return funcemail();
         }
-
-        if($("#emailid").val().indexOf("@") == -1 || $("#emailid").val().length < 6){
-        // $(".emaildiv").show()
-        // $("#emailid").css({"border-bottom":"2px red solid"});
-        j += 10;
-        }
-
-        if(isNaN($("#phoneid").val()) || $("#phoneid").val().length != 10){
-            // $(".phonediv").show()
-            // $("#phoneid").css({"border-bottom":"2px red solid"});
-            j += 100;
-        }
-
-
-        if($("#addressid").val().length <= 140){
-        // $(".addressdiv").show()
-        // $("#addressid").css({"border-bottom":"2px red solid"});
-        j += 1000;
-        }
-
-        return j;
     }
 
+    function funcemail(){
+        if($("#emailid").val().indexOf("@") == -1 || $("#emailid").val().length < 6){
+         $(".emaildiv").show()
+         $("#emailid").css({"border-bottom":"2px red solid"});
+            return funcphone();
+        }else{
+            return funcphone();
+        }
+    }
 
-   
+    function funcphone(){
+        if(isNaN($("#phoneid").val()) || $("#phoneid").val().length != 10){
+             $(".phonediv").show()
+             $("#phoneid").css({"border-bottom":"2px red solid"});
+            return funcaddress();
+        }else{
+            return funcaddress();
+        }
+    }
+
+    function funcaddress(){
+        if($("#addressid").val().length <= 140){
+         $(".addressdiv").show()
+         $("#addressid").css({"border-bottom":"2px red solid"});
+            return returnfunc();
+        }else{
+            return returnfunc();
+        }
+    }
+
+    function returnfunc(){
+    if($("#nameid").val().length < 2 ||  isNaN($("#phoneid").val()) || $("#phoneid").val().length != 10  || $("#emailid").val().indexOf("@") == -1 || $("#emailid").val().length < 6   || $("#addressid").val().length <= 140   ){
+        return false;
+    }else{
+        alert("Your Information Saved Successfully");
+         return true;
+    }
+}
+
  function validateform(){ 
-     
-    var i = fori();
-    console.log(fori());
-
-
     $(".namediv").hide()
     $(".emaildiv").hide()
     $(".phonediv").hide()
@@ -53,137 +63,7 @@ function  fori(){
     $("#phoneid").css({"border-bottom":"2px #599a68 solid"});
     $("#addressid").css({"border-bottom":"2px #599a68 solid"});
 
+    return funcname();
 
-    if( i=== 0){
-        alert("Form Submitted Successfully!");
-        return true;
-    }
+ }
 
-    if(i=== 1){
-        $(".namediv").show()
-        $("#nameid").css({"border-bottom":"2px red solid"});
-        return false;
-    }
-
-    if(i=== 10){
-        $(".emaildiv").show()
-        $("#emailid").css({"border-bottom":"2px red solid"});
-        return false;
-    }
-
-    if(i=== 100){
-        $(".phonediv").show()
-        $("#phoneid").css({"border-bottom":"2px red solid"});
-        return false;
-    }
-
-    if(i=== 1000){
-        $(".addressdiv").show()
-        $("#addressid").css({"border-bottom":"2px red solid"});
-        return false;
-    }
-
-    if(i=== 11){
-        $(".namediv").show()
-        $("#nameid").css({"border-bottom":"2px red solid"});
-        $(".emaildiv").show()
-        $("#emailid").css({"border-bottom":"2px red solid"});
-        return false;
-    }
-
-    if(i=== 101){
-        $(".namediv").show()
-        $("#nameid").css({"border-bottom":"2px red solid"});
-        $(".phonediv").show()
-        $("#phoneid").css({"border-bottom":"2px red solid"});
-        return false;
-    }
-
-    if(i=== 1001){
-        $(".namediv").show()
-        $("#nameid").css({"border-bottom":"2px red solid"});
-        $(".addressdiv").show()
-        $("#addressid").css({"border-bottom":"2px red solid"});
-        return false;
-    }
-
-    if(i=== 110){
-        $(".emaildiv").show()
-        $("#emailid").css({"border-bottom":"2px red solid"});
-        $(".phonediv").show()
-        $("#phoneid").css({"border-bottom":"2px red solid"});
-        return false;
-    }
- 
-    if(i=== 1010){
-        $(".emaildiv").show()
-        $("#emailid").css({"border-bottom":"2px red solid"});
-        $(".addressdiv").show()
-        $("#addressid").css({"border-bottom":"2px red solid"});
-        return false;
-    }
-
-    if(i=== 1100){
-        $(".phonediv").show()
-        $("#phoneid").css({"border-bottom":"2px red solid"});
-        $(".addressdiv").show()
-        $("#addressid").css({"border-bottom":"2px red solid"});
-        return false;
-    }
-    
-    if(i=== 111){
-        $(".namediv").show()
-        $("#nameid").css({"border-bottom":"2px red solid"});
-        $(".emaildiv").show()
-        $("#emailid").css({"border-bottom":"2px red solid"});
-        $(".phonediv").show()
-        $("#phoneid").css({"border-bottom":"2px red solid"});
-        return false;
-    }
-
-    if(i=== 1011){
-        $(".namediv").show()
-        $("#nameid").css({"border-bottom":"2px red solid"});
-        $(".emaildiv").show()
-        $("#emailid").css({"border-bottom":"2px red solid"});
-        $(".addressdiv").show()
-        $("#addressid").css({"border-bottom":"2px red solid"});
-        return false;
-    }
-
-    if(i=== 1101){
-        $(".namediv").show()
-        $("#nameid").css({"border-bottom":"2px red solid"});
-        $(".phonediv").show()
-        $("#phoneid").css({"border-bottom":"2px red solid"});
-        $(".addressdiv").show()
-        $("#addressid").css({"border-bottom":"2px red solid"});
-        return false;
-    }
-
-    if(i=== 1110){
-        $(".emaildiv").show()
-        $("#emailid").css({"border-bottom":"2px red solid"});
-        $(".phonediv").show()
-        $("#phoneid").css({"border-bottom":"2px red solid"});
-        $(".addressdiv").show()
-        $("#addressid").css({"border-bottom":"2px red solid"});
-        return false;
-    }
-
-    if(i=== 1111){
-        $(".namediv").show()
-        $("#nameid").css({"border-bottom":"2px red solid"});
-        $(".emaildiv").show()
-        $("#emailid").css({"border-bottom":"2px red solid"});
-        $(".phonediv").show()
-        $("#phoneid").css({"border-bottom":"2px red solid"});
-        $(".addressdiv").show()
-        $("#addressid").css({"border-bottom":"2px red solid"});
-        return false;
-    }
-
-
-   
-
-}
