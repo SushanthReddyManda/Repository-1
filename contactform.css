@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+/* [Intervention] Slow network is detected. See https://www.chromestatus.com/feature/5636954674692096 for more details.
+ Fallback font will be used while loading: https://fonts.gstatic.com/s/josefinsans/v15/Qw3PZQNVED7rKGKxtqIqX5E-AVSJrOCfjY46_DjQbMZhLw.woff2 */
 
 *{
     font-family: 'Josefin Sans', sans-serif;
@@ -45,21 +47,43 @@ h1,
     /* margin:auto; */
 }
 
+/*  _-_-_-_-_-_- INPUT SELECTORS  _-_-_-_-_-_- */
+
+
 input{
     padding:0px ; 
     border-top: none ;
     border-left: none;
     border-right: none;
     border-bottom: 2px #599a68 solid;
-    width: 250px;
+    width: 280px;
     font-size: 20px;
+    background-color: #fff;
+    background-color:  none !important;
+    color: #000 !important;
+
 }
 
 input:focus{
     outline:none;
+    background-color: #fff;
 }
 
 
+
+/* 
+  .show-autofill-new{
+    background-color: #E8F0FE !important;
+    background-image: none !important;
+    color: #000000 !important;
+  }
+  .show-autofill-old {
+    background-color: #FAFFBD !important;
+    background-image: none !important;
+    color: #000000 !important;
+  } */
+
+/*  _-_-_-_-_-_- ALERT MESSAGE SELECTORS  _-_-_-_-_-_- */
 
 .namediv,
 .emaildiv,
@@ -78,12 +102,12 @@ color: red;
 }
 
 
-
-
 .stUf5b{
     color: red;
 }
 
+
+/*  _-_-_-_-_-_- MEDIA SELECTORS  _-_-_-_-_-_- */
 
 @media(max-width:966px){
     .main{
